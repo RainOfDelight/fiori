@@ -11,7 +11,7 @@ height:100px;
 background-color:red;}
 
 .primadiv{
-background-color:yellow;
+background-color:yellow !important;
 width:33%;
 float:left;
 }
@@ -26,4 +26,8 @@ float:left;
 background-color:lightgreen;
 width:33%;
 float:left;
+}
+
+.primadiv{
+    background-color:green;
 }
