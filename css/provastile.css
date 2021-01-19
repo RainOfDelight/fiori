@@ -1,0 +1,21 @@
+.primo{
+	color:blue;
+	background-color: lightblue;
+	height:40px;
+	width:500px;
+}
+.secondo{
+color:lightblue;
+}
+.terzo{
+color:orange
+}
+.primadiv{
+	float:left;
+}
+.secondadiv{
+	float:left;
+}
+.terzadiv{
+	float:left;
+	}
