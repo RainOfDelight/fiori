@@ -16,6 +16,9 @@
 		</div>
 		<div class="ricerca headerDiv">
 			Inserisci qui la parola da cercare
+			<form action="search.php">
+				<input type="text" class="input" name="pianta_ricercata">
+			</form>
 		</div>
 		<div class="carrello headerDiv">
 			<img class="regoloDimensioni" src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg">
@@ -32,6 +35,17 @@
 		<div><img src="images/fiore2.jpg"></div>
 		<div><img src="images/pianta1.jpg"></div>
 		<div><img src="images/pianta2.jpg"></div>
+	</div>
+	<div class="footer">
+		<div class="telefono">
+			<p>Telefono:0871-554322</p>
+		</div>
+		<div class="indirizzo">
+			<p>Indirizzo: via dei fiori, 25</p>
+		</div>
+		<div class="contattaci">
+			<a href="#">Contattaci su questo sito</a>
+		</div>
 	</div>
 </body>
 </html>

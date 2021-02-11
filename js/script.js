@@ -1,8 +1,10 @@
 $(document).ready(function() {
-    $('.animazione').slick()({
-        infinite: true,
-        autoplay:true,
-        autoplaySpeed: 100
+    $('.animazione').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        arrows: false
     })
 
 
