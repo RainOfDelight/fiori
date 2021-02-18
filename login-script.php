@@ -6,10 +6,7 @@ echo "Lo username è $username<br>";
 echo "La password è $password<br>";
 
 
-$servername = "localhost";
-$dbusername = "fiori";
-$dbpassword = "BKGjofSOLmfAQLPEBKGjofSOLmfAQLPE1!-@";
-$database = "fiori";
+include ("credentials.php");
 // Create connection
 $conn = new mysqli($servername, $dbusername, $dbpassword, $database);
 
@@ -18,8 +15,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error."<br>");
 }
 echo "Connected successfully<br>";
-
-
 
 $sql = "SELECT * FROM utenti";
 $result = $conn->query($sql);
