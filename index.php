@@ -26,6 +26,9 @@
 		<div class="login headerDiv">
 			<img class="regoloDimensioni" src="https://library.kissclipart.com/20180922/eve/kissclipart-icon-full-name-clipart-computer-icons-avatar-icon-f6cf26ff2213f36e.jpg">
 		</div>
+        <div class="logout">
+            <a href="logout.php">Logout</a>
+        </div>
 	</div>
 	<div class="logo">
 		<h1>Piante e fiori Tinari</h1>

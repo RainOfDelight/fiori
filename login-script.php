@@ -27,7 +27,8 @@ if ($result->num_rows > 0) {
                 echo "Password Corretta<br>";
                 session_start();
                 $_SESSION["username"] = $username;
-                 header("Location: /index.php");
+                global $base_url;
+                 header("Location: $base_url/index.php");
             }
             else{
                 echo " Password sbagliata<br>";
