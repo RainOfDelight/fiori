@@ -28,7 +28,7 @@ echo "Connected successfully<br>";
 $esiste = utente_esiste($conn, $username);
 if ($esiste == true) {
     die("L'utente esiste già");
-}else{nuovo_utente();
+}else{nuovo_utente($conn, $nome, $cognome, $username, $password);
 
 }
 
@@ -54,11 +54,15 @@ function utente_esiste($conn, $username)
     }
 
 }
-function nuovo_utente($conn, $id, $nome, $cognome, $username, $password_hash)
+function nuovo_utente($conn, $nome, $cognome, $username, $password)
 {
-
-    $sql = "INSERT INTO fiori (nome, cognome, username, password_hash) VALUES ($nome, $cognome, $username, hash('sha256', $password))"
-
+    $password_hash=  hash('sha256', $password);
+    echo ($nome);
+    echo ($cognome);
+    echo ($username);
+    echo ($password_hash);
+    $sql = "INSERT INTO utenti (nome, cognome, username, password_hash) VALUES ($nome, $cognome, $username, $password_hash)";
+    $conn->query($sql);
 
 }
 

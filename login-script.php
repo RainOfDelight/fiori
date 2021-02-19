@@ -25,6 +25,9 @@ if ($result->num_rows > 0) {
             echo "Usename corretto<br>";
             if($row['password_hash'] == hash('sha256', $password)){
                 echo "Password Corretta<br>";
+                session_start();
+                $_SESSION["username"] = $username;
+                 header("Location: /index.php");
             }
             else{
                 echo " Password sbagliata<br>";
