@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +28,13 @@
 		<div class="login headerDiv">
 			<img class="regoloDimensioni" src="https://library.kissclipart.com/20180922/eve/kissclipart-icon-full-name-clipart-computer-icons-avatar-icon-f6cf26ff2213f36e.jpg">
 		</div>
+
         <div class="logout">
+            <?php if (!empty($_SESSION["username"])) { ?>
             <a href="logout.php">Logout</a>
+            <?php } else { ?>
+            <a href="login.php">login</a>
+            <?php } ?>
         </div>
 	</div>
 	<div class="logo">

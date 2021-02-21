@@ -70,3 +70,15 @@ body{
     color: white;
     text-decoration: none;
 }
+
+/* LOGOUT */
+
+.logout {
+    color:black;
+    width: 100px;
+    float: right;
+}
+
+.logout a{
+    color:black;
+}

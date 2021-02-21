@@ -2,6 +2,7 @@
 $username=$_POST["username"];
 $password=$_POST["password"];
 
+
 echo "Lo username è $username<br>";
 echo "La password è $password<br>";
 
