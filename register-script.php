@@ -28,7 +28,8 @@ echo "Connected successfully<br>";
 $esiste = utente_esiste($conn, $username);
 if ($esiste == true) {
     die("L'utente esiste già");
-}else{nuovo_utente($conn, $nome, $cognome, $username, $password);
+}else{
+    nuovo_utente($conn, $nome, $cognome, $username, $password);
 
 }
 
@@ -57,11 +58,7 @@ function utente_esiste($conn, $username)
 function nuovo_utente($conn, $nome, $cognome, $username, $password)
 {
     $password_hash=  hash('sha256', $password);
-    echo ($nome);
-    echo ($cognome);
-    echo ($username);
-    echo ($password_hash);
-    $sql = "INSERT INTO utenti (nome, cognome, username, password_hash) VALUES ($nome, $cognome, $username, $password_hash)";
+    $sql = "INSERT INTO utenti (nome, cognome, username, password_hash) VALUES ('$nome','$cognome', '$username', '$password_hash')";
     $conn->query($sql);
 
 }
