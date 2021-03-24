@@ -1,4 +1,13 @@
-<?php session_start(); ?>
+<?php session_start();
+include ("credentials.php");
+// Create connection
+$conn = new mysqli($servername, $dbusername, $dbpassword, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error."<br>");
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -46,6 +55,22 @@
 		<div><img src="images/pianta1.jpg"></div>
 		<div><img src="images/pianta2.jpg"></div>
 	</div>
+
+    <?php
+    echo "Questi sono i prodotti presenti nel magazzino<br>";
+    $prodotti = get_prodotti($conn);
+    $n = count ($prodotti);
+
+    echo '<table>';
+    echo '<tr><th>Nome</th><th>Quantità</th><th>Prezzo</th></tr>';
+    for($i=0;$i<$n;$i++){
+        echo '<tr><td>' . $prodotti[$i][1] . '</td><td>' . $prodotti[$i][4] . '</td><td>'.$prodotti[$i][3].'</td></tr>';
+
+    }
+    echo '</table>';
+    ?>
+
+
 	<div class="footer">
 		<div class="telefono">
 			<p>Telefono:0871-554322</p>
@@ -61,4 +86,11 @@
 </html>
 
 
-
+<?php
+function get_prodotti($conn){
+    $sql = "SELECT * FROM `prodotti`";
+    $query = $conn->query($sql);
+    $result = $query -> fetch_all();
+    return $result;
+}
+?>
