@@ -62,9 +62,9 @@ if ($conn->connect_error) {
     $n = count ($prodotti);
 
     echo '<table>';
-    echo '<tr><th>Nome</th><th>Quantità</th><th>Prezzo</th></tr>';
+    echo '<tr><th>Nome</th><th>Quantità</th><th>Prezzo</th><th>Descrizione</th><th>Foto</th></tr>';
     for($i=0;$i<$n;$i++){
-        echo '<tr><td>' . $prodotti[$i][1] . '</td><td>' . $prodotti[$i][4] . '</td><td>'.$prodotti[$i][3].'</td></tr>';
+        echo '<tr><td>' . $prodotti[$i][1] . '</td><td>' . $prodotti[$i][4] . '</td><td>'.$prodotti[$i][3].'</td><td>'.$prodotti[$i][2].'</td><td>'.'<img src=images/'. $prodotti[$i][5].'>'.'</td></tr>';
 
     }
     echo '</table>';

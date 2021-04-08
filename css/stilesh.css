@@ -1,0 +1,6 @@
+.pianta{
+    width: 210px;
+    height: 330px;
+    overflow: scroll;
+    display: inline-block;
+}
