@@ -32,7 +32,7 @@ function get_prodotti_by_name($conn,$plant)
 <body>
 <div class="header">
     <div class="home headerDiv">
-        Home
+        <a href="/fiori">Home</a>
     </div>
     <div class="ricerca headerDiv">
         Inserisci qui la parola da cercare
@@ -65,21 +65,21 @@ function get_prodotti_by_name($conn,$plant)
     <div class="contenitore_piante">
         <?php foreach($prodotti as $prodotto):?>
             <div class="pianta">
-                <div class="immagine">
-                    <img src=images/<?php echo $prodotto[5];?>>
+                <div class="immaginediv">
+                    <img class="immagine" src=images/<?php echo $prodotto[5];?>>
+                </div>
+
+                <div class="nome_prezzo">
+                    <h3><?php echo $prodotto[1];?></h3>
+                    <p>&euro; <?php echo $prodotto[3];?></p>
                 </div>
 
                 <div class="descrizione">
                     <p> <?php echo $prodotto[2];?></p>
                 </div>
 
-                <div class="prezzo">
-                    <p>&euro; <?php echo $prodotto[3];?></p>
-                </div>
-
                 <div class="aggiungi_al_carrello">
-                    <p>Aggiungi al carrello</p>
-                    <img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg">
+                    <img class="compra" src="images/compra.jpg">
                 </div>
 
 

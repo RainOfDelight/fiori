@@ -1,6 +1,40 @@
 .pianta{
     width: 210px;
-    height: 330px;
-    overflow: scroll;
     display: inline-block;
+    margin: 20px;
+    border: 1px gray solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.descrizione{
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 13px;
+    width: 100%;
+}
+.immagine{
+    width:100%;
+}
+.nome_prezzo{
+    position: relative;
+}
+.nome_prezzo>h3{
+    float:left;
+    margin-left: 10px;
+}
+.nome_prezzo>p{
+    float:right;
+    margin-right: 10px;
+}
+.aggiungi_al_carrello{
+    position: relative;
+    width:100%;
+    height:60px;
+}
+.compra{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
 }
