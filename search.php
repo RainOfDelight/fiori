@@ -32,7 +32,7 @@ function get_prodotti_by_name($conn,$plant)
 <body>
 <div class="header">
     <div class="home headerDiv">
-        <a href="/fiori">Home</a>
+        <a href="/">Home</a>
     </div>
     <div class="ricerca headerDiv">
         Inserisci qui la parola da cercare
