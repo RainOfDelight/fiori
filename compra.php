@@ -27,4 +27,6 @@ function inserisci_prodotto($conn,$id_prodotto,$id_carrello,$quantita){
 }
 inserisci_prodotto($conn, $id,$id_carrello,$quantita);
 
-echo "Abbiamo inserito un prodotto con id: $id, quantità: $quantita nel carrello di " . $_SESSION['username'];
+// echo "Abbiamo inserito un prodotto con id: $id, quantità: $quantita nel carrello di " . $_SESSION['username'];
+
+echo "{\"esito\": \"positivo\"}";

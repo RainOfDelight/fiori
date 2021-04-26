@@ -81,7 +81,7 @@ function get_prodotti_by_name($conn,$plant)
                 </div>
 
                 <div class="aggiungi_al_carrello">
-                    <img class="compra" src="images/compra.jpg">
+                    <img class="compra" data-prodotto_id="<?php echo $prodotto[0];?>" src="images/compra.jpg">
                 </div>
 
 
