@@ -28,6 +28,8 @@ function get_prodotti_by_name($conn,$plant)
     <title></title>
     <link rel = "stylesheet" type="text/css" href="css/stile.css"/>
 	<link rel = "stylesheet" type = "text/css"  href = "css/stilesh.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/searchscript.js"></script>
 </head>
 <body>
 <div class="header">
