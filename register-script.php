@@ -64,3 +64,20 @@ function nuovo_utente($conn, $nome, $cognome, $username, $password)
 }
 
 // INSERT NEL DATABASE
+
+
+
+
+$sql = "SELECT username FROM utenti WHERE username='$username'";
+
+// $conn e' un oggetto di tipo mysqli
+
+$result = $conn->query($sql);
+$result->num_rows;
+
+$b = $result->fetch_field ();
+var_dump($b);
+
+// $result e' un oggetto di tipo mysqli_result
+
+//$b e' di tipo array

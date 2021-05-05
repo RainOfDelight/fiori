@@ -1,0 +1,4 @@
+t = index.marty;
+t.variabile1="Francesco";
+t.variabile2="Andrei";
+t.attiva;
