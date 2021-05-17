@@ -61,7 +61,9 @@ $smarty->setCacheDir('smarty/cache');
 $smarty->setConfigDir('smarty/configs');
 
 if (!empty($_SESSION["username"])) { $smarty->assign('link_login_logout', '<a href="logout.php">Logout</a>');}
-else {$smarty->assign('link_login_logout', ' <a href="login.php">login</a>');}
+else {$smarty->assign('link_login_logout', ' <a href="login.php">Login</a>');}
+
+
 
 $smarty->assign('piante', array(
     array('name' => 'rosa', 'prezzo' => '12 euro'),
@@ -70,5 +72,6 @@ $smarty->assign('piante', array(
 ));
 $smarty->assign('nome', array("Francesco","Andrei", "Martina"));
 $smarty->display('index.tpl');
+
 
 ?>

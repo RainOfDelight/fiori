@@ -13,20 +13,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error."<br>");
 }
 
-//echo "Connected successfully<br>";
-//echo $_SESSION["username"] . "<br>";
-echo "Questo è il tuo carrello<br>";
-$user_id=get_username_id($conn, $_SESSION["username"]);
-$prodotti = get_prodotti($conn, $user_id);
-$n = count ($prodotti);
 
-echo '<table>';
-echo '<tr><th>Nome</th><th>Quantità</th><th>Prezzo</th></tr>';
-for($i=0;$i<$n;$i++){
-    echo '<tr><td>' . $prodotti[$i][7] . '</td><td>'.$prodotti[$i][5].'</td><td>'.$prodotti[$i][9].'</td></tr>';
-
-}
-echo '</table>';
 
 
 
@@ -56,80 +43,28 @@ function get_prodotti($conn, $user_id){
     $query = $conn->query($sql);
     $result = $query -> fetch_all();
     return $result;
-}?>
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel = "stylesheet" type="text/css" href="css/stile.css"/>
-	<link rel = "stylesheet" type = "text/css"  href = "css/stilesh.css"/>
-</head>
-<body>
-<div class="header">
-    <div class="home headerDiv">
-        <a href="/">Home</a>
-    </div>
-    <div class="ricerca headerDiv">
-        Inserisci qui la parola da cercare
-        <form action="search.php">
-            <input type="text" class="input" name="pianta_ricercata">
-        </form>
-    </div>
-    <div class="carrello headerDiv">
-        <a href="carrello.php"><img class="regoloDimensioni" src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg"></a>
-    </div>
-    <div class="login headerDiv">
-        <img class="regoloDimensioni" src="https://library.kissclipart.com/20180922/eve/kissclipart-icon-full-name-clipart-computer-icons-avatar-icon-f6cf26ff2213f36e.jpg">
-    </div>
-
-    <div class="logout">
-        <?php if (!empty($_SESSION["username"])) { ?>
-            <a href="logout.php">Logout</a>
-        <?php } else { ?>
-            <a href="login.php">login</a>
-        <?php } ?>
-    </div>
-</div>
-<div class="contenuto">
-    <div class="contenitore">
-        <?php foreach($prodotti as $prodotto):?>
-        <div class="padre">
-            <div class="nome">
-                <?php echo $prodotto[7];?>
-            </div>
-            <div class="quantita">
-                <?php echo $prodotto[5];?>
-            </div>
-            <div class="prezzo">
-                &euro;<?php echo $prodotto[9];?>
-            </div>
-            <div class="immagine_carrello">
-                <img class="immagine" src=images/<?php echo $prodotto[11];?>>
-            </div>
-        </div>
+$user_id=get_username_id($conn, $_SESSION["username"]);
+$prodotti = get_prodotti($conn, $user_id);
+require('lib/Smarty/libs/Smarty.class.php');
+$smarty = new Smarty();
+$smarty->setTemplateDir('smarty/templates');
+$smarty->setCompileDir('smarty/templates_c');
+$smarty->setCacheDir('smarty/cache');
+$smarty->setConfigDir('smarty/configs');
+$smarty->assign("items", $prodotti);
+echo ("<pre>");
+var_dump($prodotti);
+echo ("</pre>");
+if (!empty($_SESSION["username"])) { $smarty->assign('link_login_logout', '<a href="logout.php">Logout</a>');}
+else {$smarty->assign('link_login_logout', ' <a href="login.php">Login</a>');}
+$smarty->display('carrello.tpl');
+?>
 
 
 
 
-
-
-        <?php endforeach; ?>
-    </div>
-</div>
-<div class="footer">
-    <div class="telefono">
-        <p>Telefono:0871-554322</p>
-    </div>
-    <div class="indirizzo">
-        <p>Indirizzo: via dei fiori, 25</p>
-    </div>
-    <div class="contattaci">
-        <a href="#">Contattaci su questo sito</a>
-    </div>
-</div>
-</body>
-</html>
 
 
 

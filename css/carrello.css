@@ -1,0 +1,9 @@
+.piu{
+    cursor: pointer;
+}
+.meno{
+    cursor: pointer;
+    border:3px solid black;
+    width:min-content;
+    padding:3px;
+}

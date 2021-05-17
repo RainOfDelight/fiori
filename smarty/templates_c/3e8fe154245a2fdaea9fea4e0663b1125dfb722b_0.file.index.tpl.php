@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-07 16:15:23
+/* Smarty version 3.1.39, created on 2021-05-13 16:09:01
   from 'C:\xampp\htdocs\smarty\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60954b7b48cf43_36796044',
+  'unifunc' => 'content_609d32fd199153_82163721',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e8fe154245a2fdaea9fea4e0663b1125dfb722b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\index.tpl',
-      1 => 1620396922,
+      1 => 1620910953,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60954b7b48cf43_36796044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_609d32fd199153_82163721 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\lib\\Smarty\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>

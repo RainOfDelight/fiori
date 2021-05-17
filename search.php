@@ -21,91 +21,22 @@ function get_prodotti_by_name($conn,$plant)
     $result = $query->fetch_all();
     return $result;
 }
+$prodotti = get_prodotti_by_name($conn,$plant);
+
+
+require('lib/Smarty/libs/Smarty.class.php');
+$smarty = new Smarty();
+$smarty->setTemplateDir('smarty/templates');
+$smarty->setCompileDir('smarty/templates_c');
+$smarty->setCacheDir('smarty/cache');
+$smarty->setConfigDir('smarty/configs');
+$smarty->assign("plant", $plant);
+if (!empty($_SESSION["username"])) { $smarty->assign('link_login_logout', '<a href="logout.php">Logout</a>');}
+else {$smarty->assign('link_login_logout', ' <a href="login.php">Login</a>');}
+$smarty->assign("prodotti", $prodotti);
+$smarty->display('search.tpl');
+
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    <link rel = "stylesheet" type="text/css" href="css/stile.css"/>
-	<link rel = "stylesheet" type = "text/css"  href = "css/stilesh.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/searchscript.js"></script>
-</head>
-<body>
-<div class="header">
-    <div class="home headerDiv">
-        <a href="/">Home</a>
-    </div>
-    <div class="ricerca headerDiv">
-        Inserisci qui la parola da cercare
-        <form action="search.php">
-            <input type="text" class="input" name="pianta_ricercata">
-        </form>
-    </div>
-    <div class="carrello headerDiv">
-        <a href="carrello.php"><img class="regoloDimensioni" src="https://previews.123rf.com/images/val2014/val20141603/val2014160300005/54302312-shopping-cart-icon.jpg"></a>
-    </div>
-    <div class="login headerDiv">
-        <img class="regoloDimensioni" src="https://library.kissclipart.com/20180922/eve/kissclipart-icon-full-name-clipart-computer-icons-avatar-icon-f6cf26ff2213f36e.jpg">
-    </div>
-
-    <div class="logout">
-        <?php if (!empty($_SESSION["username"])) { ?>
-            <a href="logout.php">Logout</a>
-        <?php } else { ?>
-            <a href="login.php">login</a>
-        <?php } ?>
-    </div>
-</div>
-<div class="contenuto">
-    <?php echo ("Il nome della pianta che cerchi e' $plant<br>");
-    echo "Questi sono i prodotti presenti nel magazzino<br>";
-    $prodotti = get_prodotti_by_name($conn,$plant);
-    ?>
-
-
-    <div class="contenitore_piante">
-        <?php foreach($prodotti as $prodotto):?>
-            <div class="pianta">
-                <div class="immaginediv">
-                    <img class="immagine" src=images/<?php echo $prodotto[5];?>>
-                </div>
-
-                <div class="nome_prezzo">
-                    <h3><?php echo $prodotto[1];?></h3>
-                    <p>&euro; <?php echo $prodotto[3];?></p>
-                </div>
-
-                <div class="descrizione">
-                    <p> <?php echo $prodotto[2];?></p>
-                </div>
-
-                <div class="aggiungi_al_carrello">
-                    <img class="compra" data-prodotto_id="<?php echo $prodotto[0];?>" src="images/compra.jpg">
-                </div>
-
-
-            </div>
-
-
-
-        <?php endforeach; ?>
-    </div>
-</div>
-<div class="footer">
-    <div class="telefono">
-        <p>Telefono:0871-554322</p>
-    </div>
-    <div class="indirizzo">
-        <p>Indirizzo: via dei fiori, 25</p>
-    </div>
-    <div class="contattaci">
-        <a href="#">Contattaci su questo sito</a>
-    </div>
-</div>
-</body>
-</html>
-
 
 
 
