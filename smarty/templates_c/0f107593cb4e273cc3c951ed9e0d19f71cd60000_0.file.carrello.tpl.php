@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-17 08:30:56
+/* Smarty version 3.1.39, created on 2021-05-19 15:39:40
   from 'C:\xampp\htdocs\smarty\templates\carrello.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60a20da0cae605_05211403',
+  'unifunc' => 'content_60a5151c5c0c28_33225127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f107593cb4e273cc3c951ed9e0d19f71cd60000' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\carrello.tpl',
-      1 => 1621233055,
+      1 => 1621431424,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60a20da0cae605_05211403 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60a5151c5c0c28_33225127 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -35,6 +35,9 @@ function content_60a20da0cae605_05211403 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="js/searchscript.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/carrello.js"><?php echo '</script'; ?>
 >
 </head>
 <body>
@@ -57,9 +60,8 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
 </div>
                     <div class = "meno">-</div>
                     <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['item']->value[5];?>
-">
+" class ="numero">
                     <div class = "piu">+</div>
-                    <button>+</button>
                 </div>
             <div class = "div_immagine_item">
                 <img src="images/<?php echo $_smarty_tpl->tpl_vars['item']->value[11];?>

@@ -7,3 +7,22 @@
     width:min-content;
     padding:3px;
 }
+.informazioni{
+    width:50%;
+    float:left;
+}
+.div_immagine_item{
+    width:50%;
+    float:right;
+}
+.item{
+    position: relative;
+    height:200px;
+    margin:20px;
+    border:gray 3px solid;
+    padding: 20px;
+    border-radius: 5px;
+}
+.immagine_item{
+    height:100%;
+}

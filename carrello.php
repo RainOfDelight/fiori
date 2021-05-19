@@ -54,9 +54,6 @@ $smarty->setCompileDir('smarty/templates_c');
 $smarty->setCacheDir('smarty/cache');
 $smarty->setConfigDir('smarty/configs');
 $smarty->assign("items", $prodotti);
-echo ("<pre>");
-var_dump($prodotti);
-echo ("</pre>");
 if (!empty($_SESSION["username"])) { $smarty->assign('link_login_logout', '<a href="logout.php">Logout</a>');}
 else {$smarty->assign('link_login_logout', ' <a href="login.php">Login</a>');}
 $smarty->display('carrello.tpl');
