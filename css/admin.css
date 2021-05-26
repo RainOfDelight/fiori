@@ -1,8 +1,45 @@
-.ordini{
+.select_ordini{
+    float:left;
+    width:200px;
+}
+.select_prodotti{
     float:left;
     width:200px;
 }
 .prodotti{
+    position: relative;
+    width:90%;
+    margin: 5%;
+}
+.prodotto{
+    width:100%;
+    border: 2px solid red;
+    height: 300px;
+
+}
+
+.nome_prezzo_immagine{
+    position: relative;
+    height: 150px;
+}
+.nome_prezzo{
+    width:60%;
     float:left;
-    width:200px;
+}
+.immagine{
+    width:40%;
+    float:right;
+    height: 100%;
+    position: relative;
+}
+.descrizione{
+    height:150px;
+}
+.foto{
+    height:80%;
+    width:100%;
+    object-fit: cover;
+}
+textarea{
+    width:60%;
 }
