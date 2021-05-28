@@ -9,22 +9,27 @@
 .prodotti{
     position: relative;
     width:90%;
-    margin: 5%;
+    margin-top: 2%;
 }
 .prodotto{
     width:100%;
     border: 2px solid red;
     height: 300px;
-
-}
-
-.nome_prezzo_immagine{
     position: relative;
-    height: 150px;
+
 }
-.nome_prezzo{
-    width:60%;
+
+.info{
+    position: relative;
+    height: 100%;
+    width: 60%;
     float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nome,.prezzo,.descrizione{
+    margin: 5px;
 }
 .immagine{
     width:40%;
@@ -41,5 +46,9 @@
     object-fit: cover;
 }
 textarea{
-    width:60%;
+    width:80%;
+    height: 100%;
+}
+.salva{
+    align-self: center;
 }

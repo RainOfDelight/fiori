@@ -25,12 +25,22 @@ function is_admin($conn, $username_id)
         return true;
     }
 }
+function leggiprodotti($conn){
+    $sql = "SELECT nome,prezzo,descrizione,immagine FROM `prodotti`";
+    $result = $conn->query($sql);
+    $tutti_i_prodotti=array();
+    while ($b = $result->fetch_assoc()){
+        array_push($tutti_i_prodotti,$b);
+    }
+    return $tutti_i_prodotti;
+}
 
 
 include("credentials.php");
 $conn = new mysqli($servername, $dbusername, $dbpassword, $database);
 
-
+//$prodotti = array(array("nome"=>"crisantemo", "prezzo"=>"2€", "descrizione"=>"Questo è un crisantemo", "immagine"=>"images/crisantemo.jpg"), array("nome"=>"rosa", "prezzo"=>"1€", "descrizione"=>"Questa è una rosa", "immagine"=>"images/rosa1.jpg"));
+$prodotti = leggiprodotti($conn);
 if (empty($_SESSION["username"])) {
     header('Location: login.php');
 } else {
@@ -42,6 +52,7 @@ if (empty($_SESSION["username"])) {
         $smarty->setCompileDir('smarty/templates_c');
         $smarty->setCacheDir('smarty/cache');
         $smarty->setConfigDir('smarty/configs');
+        $smarty->assign("prodotti", $prodotti);
         $smarty->display('admin.tpl');
     } else {
         header('Location: index.php');

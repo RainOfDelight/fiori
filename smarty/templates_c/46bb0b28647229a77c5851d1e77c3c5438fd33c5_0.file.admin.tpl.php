@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-26 16:44:37
+/* Smarty version 3.1.39, created on 2021-05-28 18:39:21
   from 'C:\xampp\htdocs\smarty\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ae5ed588bb67_68008867',
+  'unifunc' => 'content_60b11cb96757a2_39022919',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46bb0b28647229a77c5851d1e77c3c5438fd33c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\admin.tpl',
-      1 => 1622040276,
+      1 => 1622219959,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60ae5ed588bb67_68008867 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60b11cb96757a2_39022919 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -40,25 +40,44 @@ function content_60ae5ed588bb67_68008867 (Smarty_Internal_Template $_smarty_tpl)
     <div class = "logout">Logout</div>
 </div>
 <div class="prodotti">
+    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['prodotti']->value, 'a');
+$_smarty_tpl->tpl_vars['a']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
+$_smarty_tpl->tpl_vars['a']->do_else = false;
+?>
     <div class="prodotto">
-        <div class="nome_prezzo_immagine">
-            <div class="nome_prezzo">
-            <input disabled type="text" value="Crisantemo">
-            <input type="button" value="modifica">
-            <input disabled type="text" value="2€">
-            <input type="button" value="modifica">
-            </div>
-            <div class="immagine">
-            <img class="foto" src="images/crisantemo.jpg">
+        <div class="info">
+            <div class="nome">
+            <input disabled type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["nome"];?>
+">
             <input type="button" value="modifica">
             </div>
+            <div class="prezzo">
+            <input disabled type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["prezzo"];?>
+">
+            <input type="button" value="modifica">
+            </div>
+            <div class="descrizione">
+                <textarea disabled  rows="5" cols="20"><?php echo $_smarty_tpl->tpl_vars['a']->value["descrizione"];?>
+</textarea>
+                <input type="button" value="modifica">
+            </div>
+            <input class="salva" type="button" value="salva">
+
         </div>
-        <div class="descrizione">
-            <textarea disabled  rows="5" cols="20">Il crisantemo è un genere di piante angiosperme dicotiledoni della famiglia delle Asteraceae che comprende piante erbacee perenni o annuali, originarie di molte parti del mondo, dall'Europa alla Cina, con numerosi ibridi e varietà coltivati come piante ornamentali in floricoltura e nel giardinaggio</textarea>
+        <div class="immagine">
+            <img class="foto" src="images/<?php echo $_smarty_tpl->tpl_vars['a']->value["immagine"];?>
+">
             <input type="button" value="modifica">
         </div>
     </div>
+    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
+
+
 
 </body>
 </html><?php }
