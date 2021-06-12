@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-11 16:01:41
+/* Smarty version 3.1.39, created on 2021-06-12 10:17:36
   from 'C:\xampp\htdocs\smarty\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c36cc5c8d341_92347378',
+  'unifunc' => 'content_60c46da0622fd8_57893718',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46bb0b28647229a77c5851d1e77c3c5438fd33c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\admin.tpl',
-      1 => 1623420100,
+      1 => 1623485853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c36cc5c8d341_92347378 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c46da0622fd8_57893718 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +39,33 @@ function content_60c36cc5c8d341_92347378 (Smarty_Internal_Template $_smarty_tpl)
     <div class="select_prodotti">Prodotti</div>
     <div class = "logout">Logout</div>
 </div>
+<div class="inserimento_prodotti">
+    <h1>Inserimento prodotto</h1>
+    <div class="prodotto">
+        <div class="info">
+            <div class="nome">
+                <input class="input_nome" type="text" placeholder="Inserisci nome">
+            </div>
+            <div class="prezzo">
+                <input class="input_prezzo" type="text" placeholder="Inserisci prezzo">
+            </div>
+            <div class="descrizione">
+                <textarea class="input_descrizione"  rows="5" cols="20" placeholder="Inserisci una descrizione"></textarea>
+            </div>
+            <input class="inserisci" type="button" value="inserisci">
+
+        </div>
+        <div class="immagine">
+            <p>Scegli un'immagine</p>
+
+            <input type="file" name="fileToUpload" class="fileToUpload">
+        </div>
+    </div>
+</div>
+
+<br><br><br>
 <div class="prodotti">
+    <h1>Modifica prodotti esistenti</h1>
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['prodotti']->value, 'a');
 $_smarty_tpl->tpl_vars['a']->do_else = true;

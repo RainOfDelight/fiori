@@ -12,7 +12,33 @@
     <div class="select_prodotti">Prodotti</div>
     <div class = "logout">Logout</div>
 </div>
+<div class="inserimento_prodotti">
+    <h1>Inserimento prodotto</h1>
+    <div class="prodotto">
+        <div class="info">
+            <div class="nome">
+                <input class="input_nome" type="text" placeholder="Inserisci nome">
+            </div>
+            <div class="prezzo">
+                <input class="input_prezzo" type="text" placeholder="Inserisci prezzo">
+            </div>
+            <div class="descrizione">
+                <textarea class="input_descrizione"  rows="5" cols="20" placeholder="Inserisci una descrizione"></textarea>
+            </div>
+            <input class="inserisci" type="button" value="inserisci">
+
+        </div>
+        <div class="immagine">
+            <p>Scegli un'immagine</p>
+
+            <input type="file" name="fileToUpload" class="fileToUpload">
+        </div>
+    </div>
+</div>
+
+<br><br><br>
 <div class="prodotti">
+    <h1>Modifica prodotti esistenti</h1>
     {foreach $prodotti as $a}
     <div class="prodotto">
         <div class="info">
