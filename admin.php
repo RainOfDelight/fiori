@@ -1,42 +1,8 @@
 <?php
 session_start();
-function get_username_id($conn, $username)
-{
-
-    $sql = "SELECT id FROM `utenti` WHERE username='$username' ";
-    $result = $conn->query($sql);
-    $b = $result->fetch_all();
-    //var_dump($b);
-    $username_id = $b[0][0];
-    //leggere il numero restituito dalla query
-    // ritornarlo
-
-    return $username_id;
-}
-
-function is_admin($conn, $username_id)
-{
-    $sql = "SELECT * FROM `admin` WHERE ID_utente='$username_id' ";
-    $result = $conn->query($sql);
-    $b = $result->fetch_all();
-    if (empty($b)) {
-        return false;
-    } else {
-        return true;
-    }
-}
-function leggiprodotti($conn){
-    $sql = "SELECT nome,prezzo,descrizione,immagine FROM `prodotti`";
-    $result = $conn->query($sql);
-    $tutti_i_prodotti=array();
-    while ($b = $result->fetch_assoc()){
-        array_push($tutti_i_prodotti,$b);
-    }
-    return $tutti_i_prodotti;
-}
-
 
 include("credentials.php");
+include("functions.php");
 $conn = new mysqli($servername, $dbusername, $dbpassword, $database);
 
 //$prodotti = array(array("nome"=>"crisantemo", "prezzo"=>"2€", "descrizione"=>"Questo è un crisantemo", "immagine"=>"images/crisantemo.jpg"), array("nome"=>"rosa", "prezzo"=>"1€", "descrizione"=>"Questa è una rosa", "immagine"=>"images/rosa1.jpg"));

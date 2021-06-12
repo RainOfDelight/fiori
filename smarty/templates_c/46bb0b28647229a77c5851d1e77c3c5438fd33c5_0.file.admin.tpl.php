@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-28 18:39:21
+/* Smarty version 3.1.39, created on 2021-06-11 16:01:41
   from 'C:\xampp\htdocs\smarty\templates\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60b11cb96757a2_39022919',
+  'unifunc' => 'content_60c36cc5c8d341_92347378',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '46bb0b28647229a77c5851d1e77c3c5438fd33c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\admin.tpl',
-      1 => 1622219959,
+      1 => 1623420100,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60b11cb96757a2_39022919 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c36cc5c8d341_92347378 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -49,27 +49,30 @@ $_smarty_tpl->tpl_vars['a']->do_else = false;
     <div class="prodotto">
         <div class="info">
             <div class="nome">
-            <input disabled type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["nome"];?>
+            <input disabled class="input_nome" type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["nome"];?>
 ">
             <input type="button" value="modifica">
             </div>
             <div class="prezzo">
-            <input disabled type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["prezzo"];?>
+            <input disabled class="input_prezzo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["prezzo"];?>
 ">
             <input type="button" value="modifica">
             </div>
             <div class="descrizione">
-                <textarea disabled  rows="5" cols="20"><?php echo $_smarty_tpl->tpl_vars['a']->value["descrizione"];?>
+                <textarea disabled class="input_descrizione"  rows="5" cols="20"><?php echo $_smarty_tpl->tpl_vars['a']->value["descrizione"];?>
 </textarea>
                 <input type="button" value="modifica">
             </div>
+            <input type="text" class="id" style="display: none" value="<?php echo $_smarty_tpl->tpl_vars['a']->value["id"];?>
+">
             <input class="salva" type="button" value="salva">
 
         </div>
         <div class="immagine">
             <img class="foto" src="images/<?php echo $_smarty_tpl->tpl_vars['a']->value["immagine"];?>
 ">
-            <input type="button" value="modifica">
+            <input type="file" name="fileToUpload" class="fileToUpload">
+            <input type="button"  value="modifica">
         </div>
     </div>
     <?php

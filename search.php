@@ -16,10 +16,19 @@ $plant = $_GET['pianta_ricercata'];
 
 function get_prodotti_by_name($conn,$plant)
 {
-    $sql = "SELECT * FROM `prodotti` WHERE nome LIKE '%$plant%'";
-    $query = $conn->query($sql);
-    $result = $query->fetch_all();
+    $sql = "SELECT * FROM `prodotti` WHERE nome LIKE ?";
+    $stmt = $conn->prepare($sql);
+    $t = "%$plant%";
+    $stmt->bind_param('s', $t);
+    $stmt->execute();
+    $result=$stmt->get_result()->fetch_all();
     return $result;
+
+
+
+    /*$query = $conn->query($sql);
+    $result = $query->fetch_all();
+    return $result;*/
 }
 $prodotti = get_prodotti_by_name($conn,$plant);
 
