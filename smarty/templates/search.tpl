@@ -21,7 +21,7 @@
 
         <div class="pianta">
             <div class="immaginediv">
-                <img class="immagine" src=images/{$prodotto[5]}>
+                <img class="immagine" src=images/{$prodotto[4]}>
             </div>
 
             <div class="nome_prezzo">
@@ -33,8 +33,14 @@
                 <p> {$prodotto[2]}</p>
             </div>
 
+            <div class = "selettore_quantita">
+                <div class = "meno">-</div>
+                <input type="text" class ="numero">
+                <div class = "piu">+</div>
+            </div>
+
             <div class="aggiungi_al_carrello">
-                <img class="compra" data-prodotto_id="<?php echo $prodotto[0];?>" src="images/compra.jpg">
+                <img class="compra" data-prodotto_id="{$prodotto[0]}" src="images/compra.jpg">
             </div>
 
 

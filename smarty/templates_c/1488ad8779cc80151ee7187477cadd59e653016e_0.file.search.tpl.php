@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-05-13 16:15:55
+/* Smarty version 3.1.39, created on 2021-06-15 11:31:25
   from 'C:\xampp\htdocs\smarty\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_609d349bbee289_34489787',
+  'unifunc' => 'content_60c8736d1bc685_18660104',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1488ad8779cc80151ee7187477cadd59e653016e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\search.tpl',
-      1 => 1620915353,
+      1 => 1623749483,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_609d349bbee289_34489787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c8736d1bc685_18660104 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +57,7 @@ $_smarty_tpl->tpl_vars['prodotto']->do_else = false;
 
         <div class="pianta">
             <div class="immaginediv">
-                <img class="immagine" src=images/<?php echo $_smarty_tpl->tpl_vars['prodotto']->value[5];?>
+                <img class="immagine" src=images/<?php echo $_smarty_tpl->tpl_vars['prodotto']->value[4];?>
 >
             </div>
 
@@ -73,9 +73,14 @@ $_smarty_tpl->tpl_vars['prodotto']->do_else = false;
 </p>
             </div>
 
+            <div class = "selettore_quantita">
+                <div class = "meno">-</div>
+                <input type="text" class ="numero">
+                <div class = "piu">+</div>
+            </div>
+
             <div class="aggiungi_al_carrello">
-                <img class="compra" data-prodotto_id="<?php echo '<?php ';?>
-echo $prodotto[0];<?php echo '?>';?>
+                <img class="compra" data-prodotto_id="<?php echo $_smarty_tpl->tpl_vars['prodotto']->value[0];?>
 " src="images/compra.jpg">
             </div>
 

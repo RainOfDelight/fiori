@@ -30,7 +30,11 @@ if ($result->num_rows > 0) {
                 if (is_admin($conn, $id)) {
                     header("Location: $base_url/admin.php");
                 } else {
-                    header("Location: $base_url/index.php");
+                    if($_GET["destinazione"]=="carrello"){
+                        header("Location: $base_url/carrello.php");
+                    }else{
+                        header("Location: $base_url/index.php");
+                    }
                 }
             } else {
                 echo " Password sbagliata<br>";

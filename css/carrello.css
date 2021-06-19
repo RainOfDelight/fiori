@@ -22,7 +22,9 @@
     border:gray 3px solid;
     padding: 20px;
     border-radius: 5px;
+    overflow: hidden;
 }
 .immagine_item{
-    height:100%;
+    position:relative;
+    width:50%;
 }

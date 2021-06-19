@@ -1,8 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION["username"])){
-    echo "Non sei loggato";
-    die();
+    header('Location: login.php?destinazione=carrello');
 }
 include("credentials.php");
 include("functions.php");

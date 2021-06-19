@@ -19,12 +19,14 @@
                 <div class = "informazioni">
                     <div class = "nome">{$item[7]}</div>
                     <div class = "prezzo">{$item[9]}</div>
-                    <div class = "meno">-</div>
-                    <input type="text" value="{$item[5]}" class ="numero">
-                    <div class = "piu">+</div>
+                    <div class = "selettore_quantita">
+                        <div class = "meno">-</div>
+                        <input type="text" value="{$item[5]}" class ="numero">
+                        <div class = "piu">+</div>
+                    </div>
                 </div>
             <div class = "div_immagine_item">
-                <img src="images/{$item[11]}" class = "immagine_item">
+                <img src="images/{$item[10]}" class = "immagine_item">
             </div>
             </div>
         {/foreach}
