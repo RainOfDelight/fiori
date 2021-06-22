@@ -38,21 +38,10 @@
     top:50%;
     transform:translate(-50%,-50%);
 }
-.piu{
+.piu1{
     cursor: pointer;
 }
 
-.meno {
+.meno1 {
     cursor: pointer;
-}
-.selettore_quantita{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-.numero{
-    width:30px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
 }

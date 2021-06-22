@@ -89,3 +89,23 @@ body{
 .logout a{
     color:black;
 }
+
+/* stile per il selettore quantità */
+
+.selettore_quantita{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.numero{
+    width:30px;
+    text-align: center;
+}
+
+.piu, .meno{
+    cursor: pointer;
+    border: 1px solid rgb(227,227,227);
+    width: 10px;
+    padding: 3px;
+    background-color: #F9F9F9;
+}
