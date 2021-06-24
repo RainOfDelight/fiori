@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-23 12:16:41
+/* Smarty version 3.1.39, created on 2021-06-24 10:51:32
   from 'C:\xampp\htdocs\smarty\templates\carrello.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60d30a093c4397_96170525',
+  'unifunc' => 'content_60d4479478c591_03778315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f107593cb4e273cc3c951ed9e0d19f71cd60000' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\carrello.tpl',
-      1 => 1624442662,
+      1 => 1624524559,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60d30a093c4397_96170525 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60d4479478c591_03778315 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -44,10 +44,10 @@ function content_60d30a093c4397_96170525 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="item_comprati">
         <div class="colonne">
-            <div class="prodotto">PRODOTTO</div>
-            <div class="prezzo">PREZZO</div>
-            <div class="quantita">QUANTIT&Agrave;</div>
-            <div class="subtotale">SUBTOTALE</div>
+            <div class="c_prodotto">PRODOTTO</div>
+            <div class="c_prezzo">PREZZO</div>
+            <div class="c_quantita">QUANTIT&Agrave;</div>
+            <div class="c_subtotale">SUBTOTALE</div>
         </div>
         <div class="items">
             <?php

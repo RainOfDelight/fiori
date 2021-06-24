@@ -14,10 +14,10 @@
 
     <div class="item_comprati">
         <div class="colonne">
-            <div class="prodotto">PRODOTTO</div>
-            <div class="prezzo">PREZZO</div>
-            <div class="quantita">QUANTIT&Agrave;</div>
-            <div class="subtotale">SUBTOTALE</div>
+            <div class="c_prodotto">PRODOTTO</div>
+            <div class="c_prezzo">PREZZO</div>
+            <div class="c_quantita">QUANTIT&Agrave;</div>
+            <div class="c_subtotale">SUBTOTALE</div>
         </div>
         <div class="items">
             {foreach $items as $item}
