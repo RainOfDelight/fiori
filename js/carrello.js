@@ -15,4 +15,5 @@ $(document).ready(function() {
         $(this).siblings(".numero").val(nuovovalore);
     });
 
+    $(".totale_carrello")
 });

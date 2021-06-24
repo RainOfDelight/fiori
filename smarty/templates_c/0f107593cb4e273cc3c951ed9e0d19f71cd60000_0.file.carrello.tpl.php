@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-22 12:32:52
+/* Smarty version 3.1.39, created on 2021-06-23 12:16:41
   from 'C:\xampp\htdocs\smarty\templates\carrello.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60d1bc541a8c81_79716170',
+  'unifunc' => 'content_60d30a093c4397_96170525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f107593cb4e273cc3c951ed9e0d19f71cd60000' => 
     array (
       0 => 'C:\\xampp\\htdocs\\smarty\\templates\\carrello.tpl',
-      1 => 1624357969,
+      1 => 1624442662,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_60d1bc541a8c81_79716170 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60d30a093c4397_96170525 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -73,7 +73,6 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
                         <div class="piu">+</div>
                     </div>
                     <div class="subtotale">????</div>
-
                 </div>
             <?php
 }

@@ -34,7 +34,6 @@
                         <div class="piu">+</div>
                     </div>
                     <div class="subtotale">????</div>
-
                 </div>
             {/foreach}
         </div>
